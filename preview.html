@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миша тупой × 100</title>
+    <style>
+        body {
+            background: #111;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .text {
+            display: inline-block;
+            margin: 8px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Миша тупой — 100 раз</h1>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById("container");
+
+        for (let i = 0; i < 100; i++) {
+            const text = document.createElement("span");
+
+            text.className = "text";
+            text.textContent = "Миша тупой";
+            text.style.color =
+                `hsl(${i * 3.6}, 100%, 65%)`;
+
+            container.appendChild(text);
+        }
+    </script>
+</body>
+</html>
